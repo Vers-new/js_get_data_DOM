@@ -19,11 +19,13 @@ let total = 0;
 populationNumbers.forEach((populationNumber) => {
   total += populationNumber;
 });
-totalPopulation.textContent = total.toString();
+
+totalPopulation.textContent = total.toLocaleString();
 
 let average = 0;
 
 if (populationNumbers.length > 0) {
   average = total / populationNumbers.length;
 }
-averagePopulation.textContent = average.toString();
+
+averagePopulation.textContent = Math.round(average).toLocaleString();
